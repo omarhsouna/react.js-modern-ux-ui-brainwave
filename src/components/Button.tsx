@@ -6,6 +6,7 @@ interface Props {
   children: React.ReactNode;
   px?: string;
   white?: boolean;
+  onClick?: () => void;
 }
 const Button = ({
   className,
@@ -13,6 +14,7 @@ const Button = ({
   children,
   px,
   white = false,
+  onClick,
   ...rest
 }: Props) => {
   return href ? (
@@ -24,6 +26,7 @@ const Button = ({
         className
       )}
       href={href}
+      onClick={onClick}
       {...rest}
     >
       <span className="relative z-10">{children}</span>
@@ -38,6 +41,7 @@ const Button = ({
         className
       )}
       {...rest}
+      onClick={onClick}
     >
       <span className="relative z-10">{children}</span>
       {ButtonSvg(white)}

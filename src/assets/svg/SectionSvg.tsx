@@ -1,6 +1,8 @@
 import PlusSvg from "./PlusSvg";
-
-const SectionSvg = ({ crossesOffset }) => {
+interface Props {
+  crossesOffset?: string;
+}
+const SectionSvg = ({ crossesOffset }: Props) => {
   return (
     <>
       <PlusSvg

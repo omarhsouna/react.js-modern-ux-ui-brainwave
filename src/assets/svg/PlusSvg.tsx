@@ -1,4 +1,7 @@
-const PlusSvg = ({ className = "" }) => {
+interface Props {
+  className?: string;
+}
+const PlusSvg = ({ className = "" }: Props) => {
   return (
     <svg className={`${className} || ""`} width="11" height="11" fill="none">
       <path
