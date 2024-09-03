@@ -34,8 +34,10 @@ const Rings = () => {
     </>
   );
 };
-
-export const BackgroundCircles = ({ parallaxRef }) => {
+interface PropsBackgroundCircles {
+  parallaxRef?: React.MutableRefObject<any> | null | undefined;
+}
+export const BackgroundCircles = ({ parallaxRef }: PropsBackgroundCircles) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
